@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamHub | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .menu-card {
+            background: rgba(30, 30, 40, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(108, 92, 231, 0.3);
+            border-color: #6c5ce7;
+        }
+
+        .menu-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .menu-card p {
+            color: #b2bec3;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <img src="header_logo.png" alt="Cafe Screen Logo" class="header-logo">
+        <span class="header-title">Caffe screen By WonderBoy_DC</span>
+    </header>
+
+    <div class="tv-frame">
+        <div class="tv-screen">
+            <div class="menu-container">
+                <a href="video.html" class="menu-card">
+                    <div class="card-preview">
+                        <video src="videos/2025-08-22 16-45-30.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>2025-08-22 16-45-30.mp4</h2>
+                    <p> Click To Select Video Stream 1</p>
+                </a>
+                <a href="video2.html" class="menu-card">
+                    <div class="card-preview">
+                        <video src="videos2/2025-08-22 16-45-30.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>2025-08-22 16-45-30.mp4</h2>
+                    <p>Click To Select Video Stream 2</p>
+                </a>
+                <a href="video3.html" class="menu-card">
+                    <div class="card-preview">
+                        <video src="videos3/2025-08-22 16-45-30.mp4" autoplay loop muted playsinline></video>
+                    </div>
+                    <h2>2025-08-22 16-45-30.mp4</h2>
+                    <p>Click To Select Video Stream 3</p>
+                </a>
+                <a href="gallery1.html" class="menu-card">
+                    <div class="card-preview">
+                        <img src="images/gallery1/photo1.png" alt="Gallery 1 Preview">
+                    </div>
+                    <h2>photo1.png</h2>
+                    <p>Click To Select Photo Collection 1</p>
+                </a>
+                <a href="gallery2.html" class="menu-card">
+                    <div class="card-preview">
+                        <img src="images/gallery2/photo1.png" alt="Gallery 2 Preview">
+                    </div>
+                    <h2>photo1.png</h2>
+                    <p>Click To Select Photo Collection 2</p>
+                </a>
+                <a href="gallery3.html" class="menu-card">
+                    <div class="card-preview">
+                        <img src="images/gallery3/photo1.png" alt="Gallery 3 Preview">
+                    </div>
+                    <h2>photo1.png</h2>
+                    <p>Click To Select Photo Collection 3</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        &copy; 2026 Cafe Screen Display System
+    </footer>
+</body>
+
+</html>

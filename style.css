@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+    /* Context for fixed header/footer */
+}
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 100;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(108, 92, 231, 0.5));
+}
+
+.header-title {
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    z-index: 100;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    max-width: 100%;
+    max-height: 100vh;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    outline: none;
+}
+
+/* TV Frame Styles */
+.tv-frame {
+    width: auto;
+    height: 85vh;
+    aspect-ratio: 9 / 16;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow:
+        0 0 0 2px #333,
+        0 0 50px rgba(0, 0, 0, 0.8),
+        inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 5px solid #000;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    margin-top: 60px;
+    /* Space for header */
+}
+
+.tv-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Updated Menu Container to fit in TV */
+.menu-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    /* Hide scrollbar for cleaner look */
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1a1a1a;
+}
+
+.menu-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 3px;
+}
+
+/* Adjust card size for the smaller screen area if needed */
+.menu-card {
+    width: 100%;
+    /* Full width cards in portrait might look better */
+    max-width: 280px;
+    padding: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; Remove to allow full width preview */
+    overflow: hidden;
+    /* rounded corners for images */
+}
+
+.card-preview {
+    width: 100%;
+    height: 140px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.card-preview img,
+.card-preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
